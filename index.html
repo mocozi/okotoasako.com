@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-        <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -15,11 +15,11 @@
 				<h1>望月亜紗子</h1>
 				<nav>
 					<ul>
-						<li><a href="#intro">Intro</a></li>
-						<li><a href="#one">Who I Am</a></li>
-						<li><a href="#two">Recent Works</a></li>
-						<li><a href="#work">Gallery</a></li>
-						<li><a href="#contact">Contact</a></li>
+						<li><a href="#intro">トップ</a></li>
+						<li><a href="#one">プロフィール</a></li>
+						<li><a href="#two">キャリア</a></li>
+						<li><a href="#three">ギャラリー</a></li>
+						<li><a href="#contact">お問い合わせ</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -33,7 +33,7 @@
 					</header>
 					<p class="title"><strong>箏・十七絃箏奏者</strong></p>
 					<footer>
-						<a href="#one" class="button style2 down">More</a>
+						<a href="#one" class="button style2 down intro">More</a>
 					</footer>
 				</div>
 			</section>
@@ -42,7 +42,7 @@
 			<section id="one" class="main style2 left dark fullscreen">
 				<div class="content box style2">
 					<header>
-						<h2 class="title">Who I Am</h2>
+						<h2 class="title profile">プロフィール</h2>
 					</header>
 					<p class="name"><strong>望月亜紗子</strong>（もちづきあさこ）</p>
 					<p>東京都調布市出身。<br>文化庁委嘱事業伝統文化親子教室の開催や文化庁芸術家派遣事業を精力的に行い、地域での活動や伝統楽器（箏・十七絃）の普及や指導に努める。</p>
@@ -54,7 +54,7 @@
 			<section id="two" class="main style2 right dark fullscreen">
 				<div class="content box style2">
 					<header>
-						<h2 class="title">Recent Works</h2>
+						<h2 class="title career">キャリア</h2>
 					</header>
 						<ul class="default">
 							<li>都立狛江高等学校箏曲部入部をきっかけに箏をはじめる。</li>
@@ -74,14 +74,14 @@
 							<li>企業向け、個人向けなどの演奏活動も行う</li>
 						</ul>
 				</div>
-				<a href="#work" class="button style2 down anchored">Next</a>
+				<a href="#three" class="button style2 down anchored">Next</a>
 			</section>
 
-		<!-- Work -->
-			<section id="work" class="main style3 primary">
+		<!-- Three -->
+			<section id="three" class="main style3 primary">
 				<div class="content">
 					<header>
-						<h2 class="title">Gallery</h2>
+						<h2 class="title">ギャラリー</h2>
 						<p>地域での活動や伝統楽器（箏・十七絃）の普及や指導に努める。</p>
 					</header>
 
@@ -114,37 +114,40 @@
 			<section id="contact" class="main style3 secondary">
 				<div class="content">
 					<header>
-						<h2 class="title">Say Hello.</h2>
-						<p class="location">東京都調布市内在住</p><p><strong>演奏・レッスン</strong>に関するご用命は下記のフォームからご連絡ください。</p>
+						<h2 class="title center">お問い合わせ</h2>
+
+						<p class="location">東京都調布市内在住</p>
+            <p class="ask"><strong>演奏・レッスン</strong><br>
+              に関するご用命は下記のフォームからご連絡ください。</p>
 					</header>
 					<div class="box">
 
-                                <form id="contact-form" action="php/mail.php">
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
-                                            <div class="error left-align" id="err-name">Please enter name.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
-                                            <div class="error left-align" id="err-email">Please enter valid email adress.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <div class="controls">
-                                            <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
-                                            <div class="error left-align" id="err-comment">Please enter your comment.</div>
-                                        </div>
-                                    </div>
-                                    <div class="control-group">
-                                        <ul class="actions special">
-								<li><input id="send-mail" type="submit" value="送信" /></li>
-							</ul>
-                                    </div>
-                                </form>
-						
+
+          <form id="contact-form" action="php/mail.php">
+            <div class="control-group">
+                <div class="controls">
+                    <input class="span12" type="text" id="name" name="name" placeholder="* Your name..." />
+                    <div class="error left-align" id="err-name">Please enter name.</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <input class="span12" type="email" name="email" id="email" placeholder="* Your email..." />
+                    <div class="error left-align" id="err-email">Please enter valid email adress.</div>
+                </div>
+            </div>
+            <div class="control-group">
+                <div class="controls">
+                    <textarea class="span12" name="comment" id="comment" placeholder="* Comments..."></textarea>
+                    <div class="error left-align" id="err-comment">Please enter your comment.</div>
+                </div>
+            </div>
+              <div class="control-group">
+                <ul class="actions special">
+                  <li><input id="send-mail" type="submit" value="送信" /></li>
+                </ul>
+              </div>
+            </form>
 						
 					<!--	
 						<form method="post" action="php/mail.php">
@@ -195,20 +198,14 @@
 			<footer id="footer">
 
 				<!-- Icons -->
-					<ul class="icons">
+					<!-- <ul class="icons">
 						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
 						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-						<!-- Icons delete
-						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-						<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-						-->
-					</ul>
+					</ul> -->
 
 				<!-- Menu -->
 					<ul class="menu">
-						<li>&copy; 2020. Mochizuki Asako. All rights reserved.</li><li>Design: <a href="https://www.wontaek-yi.com">Wontaek Yi</a></li>
+						<li>&copy; 2025. Mochizuki Asako. All rights reserved.</li>
 					</ul>
 
 			</footer>
