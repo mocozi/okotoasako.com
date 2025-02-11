@@ -184,6 +184,32 @@
 
 		}
 
+    document.querySelector('.gform').addEventListener('submit', function(e) {
+      e.preventDefault();
+      document.getElementById('loading-spinner').style.display = 'flex';
+      
+      // Google Forms에 데이터 제출
+      const formData = new FormData(this);
+      fetch(this.action, {
+        method: 'POST',
+        body: formData
+      })
+      .then(response => {
+        document.getElementById('loading-spinner').style.display = 'none';
+        document.getElementById('success-modal').style.display = 'flex';
+        this.reset(); // 폼 초기화
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('loading-spinner').style.display = 'none';
+      });
+    });
+    
+    // 모달 닫기 버튼 이벤트
+    document.getElementById('modal-close').addEventListener('click', function() {
+      document.getElementById('success-modal').style.display = 'none';
+    });
+
 	// Events.
 		var resizeTimeout, resizeScrollTimeout;
 
