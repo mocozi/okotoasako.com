@@ -2473,8 +2473,8 @@ body.is-touch .main {
 }
 
 .modal-content p {
-  font-size: 1.2em;
-  line-height: 2; /* 폰트 크기의 2배 */
+  font-size: 1em;
+  line-height: 1.5; /* 폰트 크기의 1.5배 */
   font-weight: 500;
   font-family: 'Noto Sans JP', sans-serif;
   margin-bottom: 20px;
