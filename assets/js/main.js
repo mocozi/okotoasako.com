@@ -196,7 +196,7 @@
       const data = {};
       formData.forEach((value, key) => data[key] = value);
       
-      fetch('https://script.google.com/macros/s/AKfycbxRGwIBHb8CnEj55aittLxWb1buHzoLvtJzlvLPPMe_Xw8DxnUMbqvZe6iuqfnHdaiV5w/exec', {
+      fetch('https://script.google.com/macros/s/AKfycbzx21BB67TTK3VNhlSZhn3J4Mr-ExsSd8AwaBlF5ttJkyfg3Gg81WAUfU226IUwqgrSbw/exec', {
         method: 'POST',
         body: new URLSearchParams(data)
       })
