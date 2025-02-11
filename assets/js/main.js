@@ -184,24 +184,30 @@
 
 		}
 
-    document.querySelector('.gform').addEventListener('submit', function(e) {
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
       e.preventDefault();
-      document.getElementById('loading-spinner').style.display = 'flex';
       
-      // Google Forms에 데이터 제출
+      const loadingSpinner = document.getElementById('loading-spinner');
+      if (loadingSpinner) {
+        loadingSpinner.style.display = 'flex';
+      }
+      
       const formData = new FormData(this);
-      fetch(this.action, {
+      const data = {};
+      formData.forEach((value, key) => data[key] = value);
+      
+      fetch('https://script.google.com/macros/s/AKfycbxRGwIBHb8CnEj55aittLxWb1buHzoLvtJzlvLPPMe_Xw8DxnUMbqvZe6iuqfnHdaiV5w/exec', {
         method: 'POST',
-        body: formData
+        body: new URLSearchParams(data)
       })
       .then(response => {
-        document.getElementById('loading-spinner').style.display = 'none';
-        document.getElementById('success-modal').style.display = 'flex';
-        this.reset(); // 폼 초기화
+        loadingSpinner.style.display = 'none';
+        document.getElementById('success-modal').style.display = 'block';
+        this.reset();
       })
       .catch(error => {
-        console.error('Error:', error);
-        document.getElementById('loading-spinner').style.display = 'none';
+        loadingSpinner.style.display = 'none';
+        alert('エラーが発生しました。もう一度お試しください。');
       });
     });
     
